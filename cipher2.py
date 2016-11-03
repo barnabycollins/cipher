@@ -46,7 +46,7 @@ def charfreq(cipher, OG):
     print(plain)
     print("\nKey: " + str(key))
 
-    menu(cipher, OG)
+    menu(plain, OG)
 
 
 # Character removal
@@ -65,7 +65,7 @@ def charremove(cipher, OG):
 
 # Character replacement
 def charreplace(cipher, OG):
-    if(key == {}):
+    if(len(key) == 0):
         keygen = input("\nKey is ungenerated. Here are your options:\n1:  Manually enter values\n2:  Generate parallel key\n3:  Return to menu\n--> ")
         if(keygen == "1"):
             i = 0
@@ -91,23 +91,23 @@ def charreplace(cipher, OG):
             menu(cipher, OG)
 
     else:
-        if(input("Would you like to view the cipher? (y/n)\n--> " == "y")):
+        if(input("\nWould you like to view the cipher? (y/n)\n--> ") == "y"):
             print(cipher)
             
         modify = "y"
         while modify == "y":
             modify = input("\nWould you like to modify the key? (y/n)\n--> ")
             if modify == "y":
-                keychange = input("\nWhich letter in the key should be changed?\n--> ")
+                keychange = input("\nWhich letter in the cipher should be changed?\n--> ")
                 replacement = input("Which letter would you like to change it for?\n--> ")
-                reversekey = dict (zip(key.values(),key.keys()))
+                reversekey = dict(zip(key.values(),key.keys()))
                 key[reversekey[keychange]] = replacement
                 key[reversekey[replacement]] = keychange
 
                 print("New key: " + str(key))
                 print("Reprinting your altered cipher...")
                 plain = ''
-                for character in cipher:
+                for character in OG:
                     if(character in key):
                         plain = plain + key[character]
 
@@ -116,14 +116,14 @@ def charreplace(cipher, OG):
 
                 print(plain)
 
-    menu(cipher, OG)
+    menu(plain, OG)
 
 
 # Menu
 def menu(cipher, OG):
     menu = input("\n============================MENU============================\nWhich function would you like to perform?\n1:  View the cipher and key in their current form\n2:  View the original cipher\n3:  Letter frequency analysis\n4:  Character Removal\n5:  Create or modify the key\n8:  Revert to the original cipher\n9:  Exit\n\n--> ")
     if(menu == "1"):
-        print("Printing current cipher and key:\n" + cipher + "\nKey:\n" + key)
+        print("Printing current cipher and key:\n" + cipher + "\nKey:\n" + str(key))
         menuredir(cipher, OG)
     elif(menu == "2"):
         print("Printing original cipher:\n" + OG)
