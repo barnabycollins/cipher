@@ -1,4 +1,4 @@
-# BARNABY'S CIPHER SOLVER, V2.2
+# BARNABY'S CIPHER SOLVER, V2.4
 # 03/11/2016 DEVELOPED IN PYTHON 3.5.2
 
 key = {}
@@ -27,24 +27,26 @@ def charfreq(cipher, OG):
         total = total + letters[char]
         totalconnie = totalconnie + (letters[char]*letters[char]-letters[char])
     print("\nTotal: " + str(total) + ", TotalConnie: " + str(totalconnie/(total*total-total)))
-    print("\nAttempting decryption based on letter frequency...\n")
 
-    j = 0
-    for i in sortedletters:
-        key[i] = commonletters[j].upper()
-        j += 1
+    if(input("\nWould you like to attempt to decrypt the cipher using this data? (y/n)\n--> ") == "y"):
+        print("\nAttempting decryption based on letter frequency...\n")
 
-    plain = ''
+        j = 0
+        for i in sortedletters:
+            key[i] = commonletters[j].upper()
+            j += 1
 
-    for character in cipher:
-        if(character in key):
-            plain = plain + key[character]
+        plain = ''
 
-        else:
-            plain = plain + character
+        for character in cipher:
+            if(character in key):
+                plain = plain + key[character]
 
-    print(plain)
-    print("\nKey: " + str(key))
+            else:
+                plain = plain + character
+
+        print(plain)
+        print("\nKey: " + str(key))
 
     menu(plain, OG)
 
