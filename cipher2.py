@@ -1,5 +1,5 @@
 # BARNABY'S CIPHER SOLVER, V2.2
-# 03/11/2016
+# 03/11/2016 DEVELOPED IN PYTHON 3.5.2
 
 key = {}
 alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
