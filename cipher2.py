@@ -98,8 +98,8 @@ def charreplace(cipher, OG):
             
         modify = "y"
         while modify == "y":
-            modify = input("\nWould you like to modify the key? (y/n)\n--> ")
-            if modify == "y":
+            modify = input("\nWould you like to modify the key? (Y/N)\n--> ")
+            if modify == "y" or modify == "Y":
                 keychange = input("\nWhich letter in the cipher should be changed?\n--> ")
                 replacement = input("Which letter would you like to change it for?\n--> ")
                 reversekey = dict(zip(key.values(),key.keys()))
@@ -141,7 +141,7 @@ def menu(cipher, OG):
         menuredir(cipher, OG)
         print("Operation complete.")
     else:
-        if(input("Are you sure you want to exit?(y/n)\n--> ") != "y"):
+        if(input("Are you sure you want to exit? (y/n)\n--> ") != "y"):
            menuredir(cipher, OG)
 
 def menuredir(cipher, OG):
