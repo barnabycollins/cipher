@@ -139,6 +139,7 @@ def menu(cipher, OG):
         charreplace(cipher, OG)
     elif(menu == "8"):
         cipher = OG
+        key = {}
         menuredir(cipher, OG)
         print("Operation complete.")
     else:
