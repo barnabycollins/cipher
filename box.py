@@ -9,8 +9,16 @@ rearranged = []
 condensed1 = []
 condensed2 = ""
 
-
-boxes = [cipher[i:i+boxnum] for i in range(0, len(cipher), boxnum)]
+if len(cipher) % boxnum != 0:
+    procede = input('Hmm. You are going to have characters left over. Do you want to procede? (y/n) ')
+    if procede == 'y' or procede == 'Y':
+        boxes = [cipher[i:i+boxnum] for i in range(0, len(cipher), boxnum)]
+    else:
+        print('Bye.')
+        import sys
+        sys.exit()
+else:
+    boxes = [cipher[i:i+boxnum] for i in range(0, len(cipher), boxnum)]
 
 print(boxes)
 
