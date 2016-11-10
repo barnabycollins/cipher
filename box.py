@@ -1,4 +1,4 @@
-# BARNABY'S BOX CIPHER SOLVER V1.0
+# BARNABY'S BOX CIPHER SOLVER V1.0 https://github.com/barnstorm3r
 # 10/11/2016 DEVELOPED IN PYTHON 3.5.2
 cipher = input("Cipher:\n")
 boxnum = int(input("How wide are the boxes?\n--> "))
