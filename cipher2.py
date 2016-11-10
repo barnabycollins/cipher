@@ -97,7 +97,7 @@ def charreplace(cipher, OG):
             print(cipher)
             
         modify = "y"
-        while modify == "y":
+        while modify == "y" or modify == "Y":
             modify = input("\nWould you like to modify the key? (Y/N)\n--> ")
             if modify == "y" or modify == "Y":
                 keychange = input("\nWhich letter in the cipher should be changed?\n--> ")
@@ -117,8 +117,9 @@ def charreplace(cipher, OG):
                         plain = plain + character
 
                 print(plain)
+                cipher = plain
 
-    menu(plain, OG)
+    menu(cipher, OG)
 
 
 # Menu
