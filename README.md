@@ -2,3 +2,4 @@
 # cipher2.py = full-featured program, likely bug-ridden
 # doubleletters.py = searching for 'dssynd'
 # reverse.py = reversing whatever string you throw in its general direction
+# keywordcrack.py = cracks keyword ciphers (made by [Aaron Gilchrist](https://agilchrist0.github.io))
