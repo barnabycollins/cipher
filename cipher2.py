@@ -1,4 +1,4 @@
-# BARNABY'S CIPHER SOLVER, V2.7
+# BARNABY'S CIPHER SOLVER, V2.7 https://github.com/barnstorm3r
 # 10/11/2016 DEVELOPED IN PYTHON 3.5.2
 
 key = {}
