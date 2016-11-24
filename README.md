@@ -10,3 +10,4 @@ Cipher is software to assist with solving the [University of Southampton Cipher 
 * `letterfinder.py` = outputs the locations of certain letters in a string
 * `pdssyndicate.py` = searching for 'dssynd'
 * `reverse.py` = reverses whatever string you throw in its general direction
+* `vigenere.py` = solves vigenère ciphers given the keyword
