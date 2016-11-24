@@ -13,3 +13,5 @@ for letter in cipher:
     i = i + 1
     if i == len(keyword):
         i = 0
+
+print(finished)
