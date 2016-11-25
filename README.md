@@ -8,6 +8,7 @@ Cipher is software to assist with solving the [University of Southampton Cipher 
 * `cipher2.py` = full-featured multipurpose substitution solver program, likely bug-ridden
 * `keyword.py` = cracks keyword ciphers
 * `letterfinder.py` = outputs the locations of certain letters in a string
+* `letterfreq.py` = just a simple frequency analysis program
 * `pdssyndicate.py` = searching for 'dssynd'
 * `reverse.py` = reverses whatever string you throw in its general direction
 * `totalconnie thing.py` = finds that number that i can't remember the name of for a range of vigenere keyword lengths
