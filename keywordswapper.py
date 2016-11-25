@@ -3,6 +3,6 @@ finished = ""
 keyword = input("What is the keyword you would like to change?\n--> ")
 
 for char in keyword:
-    finished = finished + alphabet[24 - alphabet.index(char)]
+    finished = finished + alphabet[(26 - alphabet.index(char))%26]
 
 print(finished)
