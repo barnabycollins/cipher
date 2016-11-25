@@ -1,3 +1,7 @@
 cipher = input("cipher:\n")
+finished = ""
 
-print(cipher[::-1])
+for char in cipher:
+    finished = char + finished
+
+print(finished)
