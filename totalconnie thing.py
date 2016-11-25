@@ -9,7 +9,7 @@ freqs = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 for i in range(number):
     results.append([])
     splits.append([])
-    if i != 0 and len(cipher) % (i) == 0:
+    if i != 0:
             
         # create sublist entries for each split
         k = 0
