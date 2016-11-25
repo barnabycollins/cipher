@@ -50,4 +50,3 @@ for j in range(int(round(len(cipher)/split, 0))):
 for j in range(len(cipher)%split):
     finished = finished + key[i][splits[j][-1:]]
 
-print(finished)
