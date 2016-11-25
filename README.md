@@ -7,6 +7,7 @@ Cipher is software to assist with solving the [University of Southampton Cipher 
 * `cipher.py`  = simple letter substitution; useful for trying keys
 * `cipher2.py` = full-featured multipurpose substitution solver program, confirmed to be bug-ridden
 * `keyword.py` = cracks keyword substitution ciphers
+* `keywordswapper.py` = swaps between plain -> cipher and cipher -> plain vignere keywords
 * `letterfinder.py` = outputs all the locations of a chosen letter in a string
 * `letterfreq.py` = just a simple frequency analysis program
 * `pdssyndicate.py` = searching for 'dssynd' in substitution ciphers
