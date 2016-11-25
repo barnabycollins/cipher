@@ -13,3 +13,4 @@ Cipher is software to assist with solving the [University of Southampton Cipher 
 * `reverse.py` = reverses whatever string you throw in its general direction
 * `totalconnie thing.py` = finds that number that i can't remember the name of for a range of vigenere keyword lengths
 * `vigenere.py` = solves vigenère ciphers given the keyword
+* `vigenerefreq.py` = makes a best guess at a vigenère cipher using letter frequency analysis
