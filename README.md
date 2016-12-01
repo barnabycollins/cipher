@@ -10,6 +10,7 @@ Cipher is software to assist with solving the [University of Southampton Cipher 
 * `keywordswapper.py` = swaps between plain -> cipher and cipher -> plain vignere keywords
 * `letterfinder.py` = outputs all the locations of a chosen letter in a string
 * `letterfreq.py` = just a simple frequency analysis program
+* `letternum.py` = finds the letter of a number or the number of a letter
 * `pdssyndicate.py` = searching for 'dssynd' in substitution ciphers
 * `reverse.py` = reverses whatever string you throw in its general direction
 * `splittar.py` = splits strings into sections of a chosen length
