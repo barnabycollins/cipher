@@ -1,6 +1,7 @@
 # cipher
 
 * `benedict thing.py` = used to split up and recombine vigenere ciphers
+* `bigramfinder.py` = counts the number of times each bigram appears in the cipher
 * `box.py` = full box cipher solver
 * `cipher.py`  = simple letter substitution; useful for trying keys
 * `cipher2.py` = full-featured multipurpose substitution solver program, confirmed to be bug-ridden
