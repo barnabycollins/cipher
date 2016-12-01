@@ -1,7 +1,5 @@
 # cipher
 
-Cipher is software to assist with solving the [University of Southampton Cipher Challenge](https://www.cipherchallenge.org/) puzzles. It includes:
-
 * `benedict thing.py` = used to split up and recombine vigenere ciphers
 * `box.py` = full box cipher solver
 * `cipher.py`  = simple letter substitution; useful for trying keys
