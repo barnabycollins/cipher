@@ -1,5 +1,6 @@
 import pycipher
 import random
+import ngram_score as ns
 
 '''
 
@@ -17,6 +18,7 @@ cycles = int(input("Number of cycles:\n--> "))
 alphabet = ['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 genlist = []
 best = 0
+fitness = ns.ngram_score("english_quadgrams.txt")
 
 # randomly generate a key
 for i in range(25):
@@ -26,13 +28,22 @@ for i in range(25):
     genlist.insert(alphabet[i], genrand)
     
 for i in genlist:
-    key.append(i)
+    parent.append(i)
+child = parent
 
 # piss around until we get something nice
 for i in range(cycles):
-    plain = pycipher.Bifid(key, period).decipher(cipher)
-    fitness = ns.ngram_score("english_quadgrams.txt")
-    if fitness.score(plain) > best:
+    plain = pycipher.Bifid(child, period).decipher(cipher)
+    goodness = fitness.score(plain)
+    if goodness <= best:
+        if random() < e**((goodness - best)/(10-(i/cycles)*10)):
+            parent = child
+
+    else:
+        parent = child
+
+    # MODIFY CHILD
+        
 
 
 
