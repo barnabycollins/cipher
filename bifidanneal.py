@@ -1,6 +1,7 @@
 import pycipher
 import random
 import ngram_score as ns
+import math
 
 '''
 
@@ -19,30 +20,70 @@ alphabet = ['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R',
 genlist = []
 best = 0
 fitness = ns.ngram_score("english_quadgrams.txt")
+parent = ''
+keywords = ["JAMELIA",
+            "MARTIN",
+            "CHARLIE",
+            "CITADELLE",
+            "PDSSYNDICATE",
+            "DYNAMIX"]
 
 # randomly generate a key
 for i in range(25):
     genrand = random.randint(0, 24)
     while genrand > len(genlist):
         genrand = random.randint(0, 24)
-    genlist.insert(alphabet[i], genrand)
+    genlist.insert(genrand, alphabet[i])
     
 for i in genlist:
-    parent.append(i)
+    parent = parent +i
 child = parent
 
+print("Working...")
 # piss around until we get something nice
 for i in range(cycles):
+    keywordsfound = []
+
+    # logic for testing the fitness of the key
     plain = pycipher.Bifid(child, period).decipher(cipher)
     goodness = fitness.score(plain)
     if goodness <= best:
-        if random() < e**((goodness - best)/(10-(i/cycles)*10)):
+        if random.random() < math.e**((goodness - best)/(10-(i/cycles)*10)):
             parent = child
 
     else:
         parent = child
 
-    # MODIFY CHILD
+    # randomly select the key positions to swap
+    charpos = random.randint(0, len(child))
+    charpos2 = random.randint(0, len(child))
+    while charpos2 == charpos:
+        charpos2 = random.randint(0, len(child))
+
+    # swap the characters by making child into a list
+    childlist = list(child)
+    tempchar = childlist.pop(charpos-1)
+    tempchar2 = childlist.pop(charpos2-2)
+    childlist.insert(charpos2, tempchar)
+    childlist.insert(charpos, tempchar2)
+
+    # synchronise the childlist back into the child string
+    child = ""
+    for j in childlist:
+        child = child + j
+
+    for j in keywords:
+        if j in plain:
+            keywordsfound.append[j]
+
+    if len(keywordsfound) >= 2:
+        print(str(keywordsfound) + " found in:\n" + plain)
+            
+
+
+print(plain)
+        
+    
         
 
 
