@@ -24,6 +24,7 @@ parent = ''
 keywords = ["JAMELIA",
             "MARTIN",
             "CHARLIE",
+            "HARRY",
             "CITADELLE",
             "PDSSYNDICATE",
             "DYNAMIX"]
@@ -72,10 +73,10 @@ for i in range(cycles):
     for j in childlist:
         child = child + j
 
+    # check each one for keywords
     for j in keywords:
         if j in plain:
-            keywordsfound.append[j]
-
+            keywordsfound.append(j)
     if len(keywordsfound) >= 2:
         print(str(keywordsfound) + " found in:\n" + plain)
             
