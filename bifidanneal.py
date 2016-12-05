@@ -59,7 +59,7 @@ for i in range(cycles):
     for j in keywords:
         if j in plain:
             keywordsfound.append(j)
-    if len(keywordsfound) >= 2:
+    if len(keywordsfound) >= 1:
         print(str(keywordsfound) + " found in:\n" + plain + "\nWith key:\n" + child)
 
     # randomly select the key positions to swap
