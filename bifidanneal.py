@@ -54,6 +54,13 @@ for i in range(cycles):
 
     else:
         parent = child
+    
+    # check the plaintext for keywords and print if it finds it
+    for j in keywords:
+        if j in plain:
+            keywordsfound.append(j)
+    if len(keywordsfound) >= 2:
+        print(str(keywordsfound) + " found in:\n" + plain + "\nWith key:\n" + child)
 
     # randomly select the key positions to swap
     charpos = random.randint(0, len(child))
@@ -72,15 +79,6 @@ for i in range(cycles):
     child = ""
     for j in childlist:
         child = child + j
-
-    # check each one for keywords
-    for j in keywords:
-        if j in plain:
-            keywordsfound.append(j)
-    if len(keywordsfound) >= 2:
-        print(str(keywordsfound) + " found in:\n" + plain)
-            
-
 
 print(plain)
         
