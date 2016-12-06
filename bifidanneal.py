@@ -51,7 +51,6 @@ for i in range(cycles):
     if goodness <= best:
         if random.random() < math.e**((goodness - best)/(10-(i/cycles)*10)):
             parent = child
-            best = goodness
 
     else:
         parent = child
