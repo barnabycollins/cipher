@@ -18,13 +18,13 @@ period = int(input("Period:\n--> "))
 cycles = int(input("Number of cycles:\n--> "))
 alphabet = ['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 genlist = []
-best = 0
+best = -999999
 fitness = ns.ngram_score("english_quadgrams.txt")
 parent = ''
 keywords = ["JAMELIA",
             "MARTIN",
             "CHARLIE",
-            "HARRY",
+            "TRINITY",
             "CITADELLE",
             "PDSSYNDICATE",
             "DYNAMIX"]
@@ -51,9 +51,11 @@ for i in range(cycles):
     if goodness <= best:
         if random.random() < math.e**((goodness - best)/(10-(i/cycles)*10)):
             parent = child
+            best = goodness
 
     else:
         parent = child
+        best = goodness
     
     # check the plaintext for keywords and print if it finds it
     for j in keywords:
@@ -80,7 +82,7 @@ for i in range(cycles):
     for j in childlist:
         child = child + j
 
-print(plain)
+print(plain + "\nKey: " + child)
         
     
         
