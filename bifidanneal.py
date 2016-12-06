@@ -28,6 +28,7 @@ keywords = ["JAMELIA",
             "CITADELLE",
             "PDSSYNDICATE",
             "DYNAMIX"]
+bestkey = ''
 
 # randomly generate a key
 for i in range(25):
@@ -51,11 +52,13 @@ for i in range(cycles):
     if goodness <= best:
         if random.random() < math.e**((goodness - best)/(10-(i/cycles)*10)):
             parent = child
+            best = goodness
 
     else:
         parent = child
         best = goodness
-    
+        bestkey = child
+        
     # check the plaintext for keywords and print if it finds it
     for j in keywords:
         if j in plain:
@@ -81,11 +84,7 @@ for i in range(cycles):
     for j in childlist:
         child = child + j
 
-print(plain + "\nKey: " + child)
-        
-    
-        
-
+print("Final:\n" + plain + "\nFinal key: " + child + "\n\nBest:\n" + pycipher.Bifid(bestkey, period).decipher(cipher) + "\nBest key: " + bestkey)
 
 
 
