@@ -1,10 +1,12 @@
 # cipher
 
 * `benedict thing.py` = used to split up and recombine vigenere ciphers
+* `bifidvariance.py` = generates bifid variance graphs
 * `bigramfinder.py` = counts the number of times each bigram appears in the cipher
 * `box.py` = full box cipher solver
 * `cipher.py`  = simple letter substitution; useful for trying keys
 * `cipher2.py` = full-featured multipurpose substitution solver program, confirmed to be bug-ridden
+* `hillcipher.py` = partially completed hill cipher solver
 * `keyword.py` = cracks keyword substitution ciphers
 * `keywordswapper.py` = swaps between plain -> cipher and cipher -> plain vignere keywords
 * `letterfinder.py` = outputs all the locations of a chosen letter in a string
