@@ -8,6 +8,8 @@
 * `cipher.py`  = simple letter substitution; useful for trying keys
 * `cipher2.py` = full-featured multipurpose substitution solver program, confirmed to be bug-ridden
 * `hillcipher.py` = partially completed hill cipher solver
+* `hill2.py` = partial hill bruteforcer
+* `hillaaron.py` = hill bruteforcer
 * `keyword.py` = cracks keyword substitution ciphers
 * `keywordswapper.py` = swaps between plain -> cipher and cipher -> plain vignere keywords
 * `letterfinder.py` = outputs all the locations of a chosen letter in a string
