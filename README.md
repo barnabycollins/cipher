@@ -1,6 +1,7 @@
 # cipher
 
 * `benedict thing.py` = used to split up and recombine vigenere ciphers
+* `bifidanneal.py` = Attempt at annealing Bifid ciphers based on semi-comprehensible online resources on annealing. May or may not work, depending on the weather.
 * `bifidvariance.py` = generates bifid variance graphs
 * `bigramfinder.py` = counts the number of times each bigram appears in the cipher
 * `box.py` = full box cipher solver
