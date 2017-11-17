@@ -23,5 +23,5 @@ for i in range(printnums):
         else:
             plain += j
 
-    print("\nGuess 1:\n" + plain)
+    print("\nGuess "+ i +":\n" + plain)
     
