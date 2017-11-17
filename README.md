@@ -5,8 +5,7 @@
 * `bifidvariance.py` = generates bifid variance graphs
 * `bigramfinder.py` = counts the number of times each bigram appears in the cipher
 * `box.py` = full box cipher solver
-* `caesar.py` = caesar cipher bruteforcer
-* `cipher.py` = simple letter substitution; useful for trying keys
+* `cipher.py`  = simple letter substitution; useful for trying keys
 * `cipher2.py` = full-featured multipurpose substitution solver program, confirmed to be bug-ridden
 * `hillcipher.py` = partially completed hill cipher solver
 * `hill2.py` = partial hill bruteforcer

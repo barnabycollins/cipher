@@ -61,7 +61,7 @@ def charremove(cipher, OG):
         else:
             new = new + letter
 
-    print("Operation complete.")
+    print("Operation complete:\n" + new)
     menu(new, OG)
 
 

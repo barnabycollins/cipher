@@ -1,9 +1,11 @@
 cipher = input("Cipher:\n")
 number = int(input("\nNumber fing\n--> "))
-finished = ""
+splits = []
 
-for j in range(number):
-    for i in range(int(len(cipher)/number)):
-        finished = finished + cipher[number*i + j]
+for i in range(number):
+    splits.append("")
 
-print(finished)
+for i in range(len(cipher)):
+    splits[i%number] += cipher[i]
+for i in splits:
+    print(i)

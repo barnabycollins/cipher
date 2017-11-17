@@ -42,9 +42,9 @@ for i in range(len(splits)):
             plain = plain + character
 
     
-for j in range(int(round(len(cipher)/split, 0))):
+for j in range(int(len(cipher)/split)):
     for i in range(split):
-        finished = finished + plain[int(round(len(cipher)/split, 0))*i + j]
+        finished = finished + plain[int(len(cipher)/split)*i + j]
 
 # accounting for remainder characters
 for j in range(len(cipher)%split):
